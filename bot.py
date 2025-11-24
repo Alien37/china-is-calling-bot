@@ -103,7 +103,7 @@ async def finish_form(message: types.Message, state: FSMContext):
 # --- О НАС ---
 @dp.message(F.text == "ℹ️ О нас")
 async def about_handler(message: types.Message):
-    await message.answer(
+    text = (
         "🏫 *О нас*\n\n"
         "Мы — агентство *China is Calling*, помогаем студентам поступить в университеты Китая 🇨🇳.\n\n"
         "Наши услуги:\n"
@@ -111,16 +111,17 @@ async def about_handler(message: types.Message):
         "• Помощь с поступлением и визой\n"
         "• Поддержка студентов в Китае\n\n"
         "Связаться с нами:\n"
-        "🌐 Сайт: @щас будет\n"
-        "💬 Telegram: @делаем\n"
-        "📸 Instagram: [china.is.calling](https://www.instagram.com/china.is.calling)\n"
-        "📺 YouTube: [China is Calling](https://youtube.com/@chinaiscalling)\n"
-        "📢 Канал: [t.me/chinaiscalling](https://t.me/chinaiscalling)\n"
-        "🎵 TikTok: [china.is.calling](https://www.tiktok.com/@china.is.calling?_t=ZT-90rwJj7bEYo&_r=1)\n"
-        "🅱️ VK: [china.is.calling](https://vk.com/club233354704)",
-        parse_mode="Markdown",
-        disable_web_page_preview=True
+        "🌐 Сайт: будет позже\n"
+        "💬 Telegram: будет позже\n"
+        "📸 Instagram: https://www.instagram.com/china.is.calling\n"
+        "📺 YouTube: https://youtube.com/@chinaiscalling\n"
+        "📢 Канал: https://t.me/chinaiscalling\n"
+        "🎵 TikTok: https://www.tiktok.com/@china.is.calling\n"
+        "🅱️ VK: https://vk.com/club233354704"
     )
+
+    await message.answer(text, disable_web_page_preview=True, parse_mode="Markdown")
+
 
 # --- ВОПРОСЫ ---
 @dp.message(F.text == "❓ Задать вопрос")
@@ -160,3 +161,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
