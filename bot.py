@@ -111,8 +111,7 @@ async def about_handler(message: types.Message):
         "• Помощь с поступлением и визой\n"
         "• Поддержка студентов в Китае\n\n"
         "Связаться с нами:\n"
-        "🌐 Сайт: будет позже\n"
-        "💬 Telegram: будет позже\n"
+        "🌐 Сайт: http://chinaiscalling.ru/\n"
         "📸 Instagram: https://www.instagram.com/china.is.calling\n"
         "📺 YouTube: https://youtube.com/@chinaiscalling\n"
         "📢 Канал: https://t.me/chinaiscalling\n"
@@ -161,4 +160,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
